@@ -1,0 +1,33 @@
+{
+  "name": "arke-cdn-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+
+  // KV namespace for asset metadata lookups
+  "kv_namespaces": [
+    {
+      "binding": "ASSET_MAP",
+      "id": "73d7b2b3c6ca4f02ac0b1e1997f7fa9d",
+      "preview_id": "0c6e2d8278d149499bbd4ea7f69bbbaa"
+    }
+  ],
+
+  // custom route
+  "routes": [
+    {
+      "pattern": "https://cdn.arke.institute",
+      "custom_domain": true
+    }
+  ],
+
+
+  // Environment variables
+  "vars": {
+    "ALLOWED_ORIGINS": "*"
+  }
+}
