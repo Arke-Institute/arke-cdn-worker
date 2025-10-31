@@ -17,10 +17,18 @@
     }
   ],
 
+  // R2 bucket for arke-archive
+  "r2_buckets": [
+    {
+      "binding": "ARKE_ARCHIVE",
+      "bucket_name": "arke-archive"
+    }
+  ],
+
   // custom route
   "routes": [
     {
-      "pattern": "https://cdn.arke.institute",
+      "pattern": "cdn.arke.institute",
       "custom_domain": true
     }
   ],
